@@ -1,25 +1,14 @@
 import random
 import string
 
-char0 = random.choices(string.printable)
-char1 = random.choices(string.printable)
-char2 = random.choices(string.printable)
-char3 = random.choices(string.printable)
-char4 = random.choices(string.printable)
-char5 = random.choices(string.printable)
-char6 = random.choices(string.printable)
-char7 = random.choices(string.printable)
-char8 = random.choices(string.printable)
-char9 = random.choices(string.printable)
-char10 = random.choices(string.printable)
-char11 = random.choices(string.printable)
-char12 = random.choices(string.printable)
-char13 = random.choices(string.printable)
-char14 = random.choices(string.printable)
-char15 = random.choices(string.printable)
-char16 = random.choices(string.printable)
-char17 = random.choices(string.printable)
-char18 = random.choices(string.printable)
-char19 = random.choices(string.printable)
+Num_Char = input("How many characters:  ")
+Type_Random = input("All or just letters and numbers:  ")
 
-print(char0 + char1 + char2 + char3 + char4 + char5 + char6 + char7 + char8 + char9 + char10 + char11 + char12 + char13 + char14 + char15 + char16 + char17 + char18 +char19)
+if Type_Random == "All":
+    for i in range(int(Num_Char)):
+        print(random.choice(string.printable))
+else:
+    Num_Char = int(Num_Char) / 2
+    for i in range(int(Num_Char)):
+        print(random.choice(string.ascii_letters))
+        print(random.choice(string.digits))
